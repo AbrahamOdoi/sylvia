@@ -2,6 +2,7 @@
 	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
 	function onDeviceReady() {
+		alert('My device is ready');
 		document.getElementById("geolocationbtn").addEventListener("click", function() {
 			navigator.geolocation.getCurrentPosition(onSuccess, onError, {
 				enableHighAccuracy : true
