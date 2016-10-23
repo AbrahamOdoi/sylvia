@@ -3,6 +3,7 @@
 
 	function onDeviceReady() {
 		alert('My device is ready');
+		
 		document.getElementById("geolocationbtn").addEventListener("click", function() {
 			navigator.geolocation.getCurrentPosition(onSuccess, onError, {
 				enableHighAccuracy : true
@@ -26,15 +27,15 @@
 
 	function onError(error) {
 		alert('code:' + error.code + '\n' + 'message' + error.message + '\n');
-	}
+	};
 
 	function onWatchSuccess(position) {
 		var element = document.getElementById('geolocation');
 		element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br/' + 'Longitude:' + position.coords.longitude + '<br/' + '<hr />' + element.innerHTML;
-	}
+	};
 
 	function onWatchError(error) {
 		alert('code:' + error.code + '\n' + 'message' + error.message + '\n');
-	}
+	};
 
 })();
